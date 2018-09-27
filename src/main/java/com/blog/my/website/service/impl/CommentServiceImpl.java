@@ -1,5 +1,7 @@
 package com.blog.my.website.service.impl;
 
+import com.blog.my.website.modal.Vo.Address4IP;
+import com.blog.my.website.utils.AddressUtils;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.blog.my.website.exception.TipException;
@@ -41,6 +43,15 @@ public class CommentServiceImpl implements ICommentService {
         }
         if (StringUtils.isBlank(comments.getAuthor())) {
             comments.setAuthor("热心网友");
+        }
+        if (StringUtils.isBlank(comments.getAddress())) {
+            String address = "软件园";
+            if(!StringUtils.isBlank(comments.getIp())){
+                Address4IP addressByIp =
+                        AddressUtils.getAddressByIp(comments.getIp());
+                address = addressByIp.getRegion()+addressByIp.getCity();
+            }
+            comments.setAddress(address);
         }
         if (StringUtils.isNotBlank(comments.getMail()) && !TaleUtils.isEmail(comments.getMail())) {
             throw new TipException("请输入正确的邮箱格式");

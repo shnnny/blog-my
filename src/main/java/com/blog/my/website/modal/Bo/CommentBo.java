@@ -24,6 +24,7 @@ public class CommentBo extends CommentVo {
         setIp(comments.getIp());
         setContent(comments.getContent());
         setOwnerId(comments.getOwnerId());
+        setAddress(comments.getAddress());
         setCid(comments.getCid());
     }
 

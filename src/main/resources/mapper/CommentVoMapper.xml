@@ -14,6 +14,7 @@
     <result column="agent" jdbcType="VARCHAR" property="agent" />
     <result column="type" jdbcType="VARCHAR" property="type" />
     <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
     <result column="parent" jdbcType="INTEGER" property="parent" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.blog.my.website.modal.Vo.CommentVo">
@@ -79,7 +80,7 @@
   </sql>
   <sql id="Base_Column_List">
     coid, cid, created, author, author_id, owner_id, mail, url, ip, agent, type, status, 
-    parent
+    parent,address
   </sql>
   <sql id="Blob_Column_List">
     content
@@ -144,12 +145,12 @@
     insert into t_comments (coid, cid, created, 
       author, author_id, owner_id, 
       mail, url, ip, agent, 
-      type, status, parent, 
+      type, status,address, parent,
       content)
     values (#{coid,jdbcType=INTEGER}, #{cid,jdbcType=INTEGER}, #{created,jdbcType=INTEGER}, 
       #{author,jdbcType=VARCHAR}, #{authorId,jdbcType=INTEGER}, #{ownerId,jdbcType=INTEGER}, 
       #{mail,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{ip,jdbcType=VARCHAR}, #{agent,jdbcType=VARCHAR}, 
-      #{type,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{parent,jdbcType=INTEGER}, 
+      #{type,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{parent,jdbcType=INTEGER},
       #{content,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.blog.my.website.modal.Vo.CommentVo" useGeneratedKeys="true" keyProperty="coid">
@@ -190,6 +191,9 @@
       </if>
       <if test="status != null">
         status,
+      </if>
+      <if test="address != null">
+        address,
       </if>
       <if test="parent != null">
         parent,
@@ -234,6 +238,9 @@
       </if>
       <if test="status != null">
         #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
       </if>
       <if test="parent != null">
         #{parent,jdbcType=INTEGER},
@@ -288,6 +295,9 @@
       <if test="record.status != null">
         status = #{record.status,jdbcType=VARCHAR},
       </if>
+      <if test="record.address != null">
+        status = #{record.status,jdbcType=VARCHAR},
+      </if>
       <if test="record.parent != null">
         parent = #{record.parent,jdbcType=INTEGER},
       </if>
@@ -313,6 +323,7 @@
       agent = #{record.agent,jdbcType=VARCHAR},
       type = #{record.type,jdbcType=VARCHAR},
       status = #{record.status,jdbcType=VARCHAR},
+      address = #{record.address,jdbcType=VARCHAR},
       parent = #{record.parent,jdbcType=INTEGER},
       content = #{record.content,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
@@ -333,6 +344,7 @@
       agent = #{record.agent,jdbcType=VARCHAR},
       type = #{record.type,jdbcType=VARCHAR},
       status = #{record.status,jdbcType=VARCHAR},
+      address = #{record.address,jdbcType=VARCHAR},
       parent = #{record.parent,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -374,6 +386,9 @@
       <if test="status != null">
         status = #{status,jdbcType=VARCHAR},
       </if>
+      <if test="address != null">
+        status = #{address,jdbcType=VARCHAR},
+      </if>
       <if test="parent != null">
         parent = #{parent,jdbcType=INTEGER},
       </if>
@@ -396,6 +411,7 @@
       agent = #{agent,jdbcType=VARCHAR},
       type = #{type,jdbcType=VARCHAR},
       status = #{status,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
       parent = #{parent,jdbcType=INTEGER},
       content = #{content,jdbcType=LONGVARCHAR}
     where coid = #{coid,jdbcType=INTEGER}
@@ -413,6 +429,7 @@
       agent = #{agent,jdbcType=VARCHAR},
       type = #{type,jdbcType=VARCHAR},
       status = #{status,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
       parent = #{parent,jdbcType=INTEGER}
     where coid = #{coid,jdbcType=INTEGER}
   </update>

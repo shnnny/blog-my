@@ -76,6 +76,11 @@ public class CommentVo implements Serializable {
      */
     private String content;
 
+    /**
+     * 评论内容
+     */
+    private String address;
+
     private static final long serialVersionUID = 1L;
 
     public Integer getCoid() {
@@ -188,5 +193,13 @@ public class CommentVo implements Serializable {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

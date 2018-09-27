@@ -31,7 +31,9 @@
                               required="required" minlength="5"
                               maxlength="2000"></textarea>
                     <button type="submit" class="submit" id="misubmit">提交</button>
+                    <p style="font-size: 12px;margin: 20px 0 0 0"><strong>隐私说明：</strong><span>你的 IP 地址会被保存，但只会公开显示你当前所在的城市名。</span></p>
                 </form>
+
             </div>
             <div th:unless="${article.allowComment}">
                 <span class="response">评论已关闭.</span>
@@ -52,6 +54,8 @@
                                         <span class="comment-author">
                                 <a href="##" rel="external nofollow"
                                    th:text="${comment.author}"></a>
+                                            <a>在<span th:text="${comment.address}"></span>说:</a>
+
                             </span>
                                     </div>
                                     <div class="comment-content">
