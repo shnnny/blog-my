@@ -474,7 +474,7 @@
   </resultMap>
 
   <select id="findReturnArchiveBo" resultMap="archiveBoMap">
-    select FROM_UNIXTIME(created, '%Y年%m月') as date, count(*) as count from t_contents where type = 'post' and status = 'publish' and a.is_delete = 0 group by date order by date desc
+    select FROM_UNIXTIME(created, '%Y年%m月') as date, count(*) as count from t_contents where type = 'post' and status = 'publish' and is_delete = 0 group by date order by date desc
   </select>
 
 
