@@ -5,6 +5,7 @@ public enum Types {
     CATEGORY("category"),
     ARTICLE("post"),
     PUBLISH("publish"),
+    REVOKE("revoke"),
     PAGE("page"),
     DRAFT("draft"),
     LINK("link"),

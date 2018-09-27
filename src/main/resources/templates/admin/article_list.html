@@ -70,16 +70,16 @@
     var tale = new $.tale();
     function delPost(cid) {
         tale.alertConfirm({
-            title:'确定删除该文章吗?',
+            title:'确定把该文章放到回收站吗?',
             then: function () {
                 tale.post({
                     url : '/admin/article/delete',
                     data: {cid: cid},
                     success: function (result) {
                         if(result && result.success){
-                            tale.alertOkAndReload('文章删除成功');
+                            tale.alertOkAndReload('文章回收成功');
                         } else {
-                            tale.alertError(result.msg || '文章删除失败');
+                            tale.alertError(result.msg || '文章回收失败');
                         }
                     }
                 });

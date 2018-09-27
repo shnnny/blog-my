@@ -85,6 +85,7 @@ public class ContentServiceImpl implements IContentService {
         contents.setModified(time);
         contents.setHits(0);
         contents.setCommentsNum(0);
+        contents.setIsDelete(0);
 
         String tags = contents.getTags();
         String categories = contents.getCategories();
@@ -100,7 +101,7 @@ public class ContentServiceImpl implements IContentService {
         LOGGER.debug("Enter getContents method");
         ContentVoExample example = new ContentVoExample();
         example.setOrderByClause("created desc");
-        example.createCriteria().andTypeEqualTo(Types.ARTICLE.getType()).andStatusEqualTo(Types.PUBLISH.getType());
+        example.createCriteria().andTypeEqualTo(Types.ARTICLE.getType()).andStatusEqualTo(Types.PUBLISH.getType()).andIsDeleteEqualTo(0);
         PageHelper.startPage(p, limit);
         List<ContentVo> data = contentDao.selectByExampleWithBLOBs(example);
         PageInfo<ContentVo> pageInfo = new PageInfo<>(data);
@@ -155,6 +156,7 @@ public class ContentServiceImpl implements IContentService {
         ContentVoExample.Criteria criteria = contentVoExample.createCriteria();
         criteria.andTypeEqualTo(Types.ARTICLE.getType());
         criteria.andStatusEqualTo(Types.PUBLISH.getType());
+        criteria.andIsDeleteEqualTo(0);
         criteria.andTitleLike("%" + keyword + "%");
         contentVoExample.setOrderByClause("created desc");
         List<ContentVo> contentVos = contentDao.selectByExampleWithBLOBs(contentVoExample);

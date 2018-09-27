@@ -57,7 +57,8 @@ public class ArticleController extends BaseController {
                         @RequestParam(value = "limit", defaultValue = "15") int limit, HttpServletRequest request) {
         ContentVoExample contentVoExample = new ContentVoExample();
         contentVoExample.setOrderByClause("created desc");
-        contentVoExample.createCriteria().andTypeEqualTo(Types.ARTICLE.getType());
+        contentVoExample.createCriteria().andTypeEqualTo(Types.ARTICLE.getType()).andIsDeleteEqualTo(0);
+
         PageInfo<ContentVo> contentsPaginator = contentsService.getArticlesWithpage(contentVoExample,page,limit);
         request.setAttribute("articles", contentsPaginator);
         return "admin/article_list";
@@ -159,8 +160,12 @@ public class ArticleController extends BaseController {
     @Transactional(rollbackFor = TipException.class)
     public RestResponseBo delete(@RequestParam int cid, HttpServletRequest request) {
         try {
-            contentsService.deleteByCid(cid);
-            logService.insertLog(LogActions.DEL_ARTICLE.getAction(), cid+"", IPKit.getIpAddrByRequest(request), this.getUid(request));
+           // contentsService.deleteByCid(cid);
+            ContentVo contents = contentsService.getContents(cid + "");
+            contents.setIsDelete(1);
+            contents.setStatus(Types.REVOKE.getType());
+            contentsService.updateContentByCid(contents);
+            logService.insertLog(LogActions.DEL_RUBBISH_ARTICLE.getAction(), cid+"", IPKit.getIpAddrByRequest(request), this.getUid(request));
         } catch (Exception e) {
             String msg = "文章删除失败";
             if (e instanceof TipException) {

@@ -85,6 +85,10 @@ public class ContentVo implements Serializable {
      * 内容文字
      */
     private String content;
+    /**
+     * 是否删除
+     */
+    private Integer isDelete;
 
     private static final long serialVersionUID = 1L;
 
@@ -214,5 +218,13 @@ public class ContentVo implements Serializable {
 
     public void setContent(String content) {
         this.content = content;
+    }
+
+    public Integer getIsDelete() {
+        return isDelete;
+    }
+
+    public void setIsDelete(Integer isDelete) {
+        this.isDelete = isDelete;
     }
 }

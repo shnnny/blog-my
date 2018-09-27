@@ -27,29 +27,26 @@
                             <th:block th:each="post : ${articles.list}">
                                 <tr th:cid="${post.cid}">
                                     <td>
-                                        <a th:href="@{'/admin/article/'+${post.cid}}" th:text="${post.title}"></a>
+                                        <a  th:text="${post.title}"></a>
                                     </td>
                                     <td><th:block th:text="${commons.fmtdate(post.created, 'yyyy-MM-dd HH:mm:ss')}"/></td>
                                     <td><th:block th:text="${post.hits}"/></td>
                                     <td><th:block th:text="${post.categories}"/></td>
                                     <td>
-                                        <th:block th:if="${post.status == 'publish'}">
-                                            <span class="label label-success">已发布</span>
+                                        <th:block th:if="${post.status == 'revoke'}">
+                                            <span class="label label-default">回收</span>
                                         </th:block>
                                        <th:block th:if="${post.status == 'draft'}">
                                            <span class="label label-default">草稿</span>
                                        </th:block>
                                     </td>
                                     <td>
-                                        <a th:href="@{'/admin/article/'+${post.cid}}"
+                                        <a href="javascript:void(0)" th:onclick="'revokePost('+${post.cid}+');'"
                                            class="btn btn-primary btn-sm waves-effect waves-light m-b-5"><i
-                                                class="fa fa-edit"></i> <span>编辑</span></a>
+                                                class="fa fa-trash-o"></i> <span>撤销</span></a>
                                         <a href="javascript:void(0)" th:onclick="'delPost('+${post.cid}+');'"
                                            class="btn btn-danger btn-sm waves-effect waves-light m-b-5"><i
                                                 class="fa fa-trash-o"></i> <span>删除</span></a>
-                                        <a class="btn btn-warning btn-sm waves-effect waves-light m-b-5" th:href="${commons.permalink(post)}+'/preview'"
-                                           target="_blank"><i
-                                                class="fa fa-rocket"></i> <span>预览</span></a>
                                     </td>
                                 </tr>
                             </th:block>
@@ -73,13 +70,31 @@
             title:'确定删除该文章吗?',
             then: function () {
                 tale.post({
-                    url : '/admin/article/delete',
+                    url : '/admin/rubbish/delete',
                     data: {cid: cid},
                     success: function (result) {
                         if(result && result.success){
                             tale.alertOkAndReload('文章删除成功');
                         } else {
                             tale.alertError(result.msg || '文章删除失败');
+                        }
+                    }
+                });
+            }
+        });
+    }
+    function revokePost(cid) {
+        tale.alertConfirm({
+            title:'确定还原该文章吗?',
+            then: function () {
+                tale.post({
+                    url : '/admin/rubbish/revoke',
+                    data: {cid: cid},
+                    success: function (result) {
+                        if(result && result.success){
+                            tale.alertOkAndReload('文章还原成功');
+                        } else {
+                            tale.alertError(result.msg || '文章还原失败');
                         }
                     }
                 });
