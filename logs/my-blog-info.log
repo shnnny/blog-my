@@ -1,0 +1,94 @@
+2018-03-16 11:13:24.129 [http-nio-8081-exec-1] DEBUG ContentServiceImpl - Enter getContents method
+2018-03-16 11:13:24.593 [http-nio-8081-exec-1] DEBUG ContentServiceImpl - Exit getContents method
+2018-03-16 11:13:32.429 [http-nio-8081-exec-10] DEBUG SiteServiceImpl - Enter getArchives method
+2018-03-16 11:13:32.582 [http-nio-8081-exec-10] DEBUG SiteServiceImpl - Exit getArchives method
+2018-03-16 11:13:42.987 [http-nio-8081-exec-5] DEBUG SiteServiceImpl - Enter getArchives method
+2018-03-16 11:13:42.993 [http-nio-8081-exec-5] DEBUG SiteServiceImpl - Exit getArchives method
+2018-03-16 11:14:18.652 [http-nio-8081-exec-8] DEBUG SiteServiceImpl - Enter getArchives method
+2018-03-16 11:14:18.661 [http-nio-8081-exec-8] DEBUG SiteServiceImpl - Exit getArchives method
+2018-03-16 11:14:40.050 [http-nio-8081-exec-7] DEBUG SiteServiceImpl - Enter getArchives method
+2018-03-16 11:14:40.057 [http-nio-8081-exec-7] DEBUG SiteServiceImpl - Exit getArchives method
+2018-03-16 11:15:10.427 [http-nio-8081-exec-8] DEBUG SiteServiceImpl - Enter getArchives method
+2018-03-16 11:15:10.432 [http-nio-8081-exec-8] DEBUG SiteServiceImpl - Exit getArchives method
+2018-03-16 11:16:50.755 [http-nio-8081-exec-7] DEBUG SiteServiceImpl - Enter getArchives method
+2018-03-16 11:16:50.760 [http-nio-8081-exec-7] DEBUG SiteServiceImpl - Exit getArchives method
+2018-03-16 11:16:57.018 [http-nio-8081-exec-6] DEBUG SiteServiceImpl - Enter getArchives method
+2018-03-16 11:16:57.023 [http-nio-8081-exec-6] DEBUG SiteServiceImpl - Exit getArchives method
+2018-03-16 11:16:58.778 [http-nio-8081-exec-10] DEBUG SiteServiceImpl - Enter getArchives method
+2018-03-16 11:16:58.783 [http-nio-8081-exec-10] DEBUG SiteServiceImpl - Exit getArchives method
+2018-03-16 11:18:10.453 [http-nio-8081-exec-7] INFO  IndexController - Enter admin index method
+2018-03-16 11:18:10.453 [http-nio-8081-exec-7] DEBUG SiteServiceImpl - Enter recentComments method:limit=5
+2018-03-16 11:18:10.462 [http-nio-8081-exec-7] DEBUG SiteServiceImpl - Exit recentComments method
+2018-03-16 11:18:10.462 [http-nio-8081-exec-7] DEBUG SiteServiceImpl - Enter recentContents method
+2018-03-16 11:18:10.481 [http-nio-8081-exec-7] DEBUG SiteServiceImpl - Exit recentContents method
+2018-03-16 11:18:10.481 [http-nio-8081-exec-7] DEBUG SiteServiceImpl - Enter getStatistics method
+2018-03-16 11:18:10.544 [http-nio-8081-exec-7] DEBUG SiteServiceImpl - Exit getStatistics method
+2018-03-16 11:18:10.544 [http-nio-8081-exec-7] DEBUG LogServiceImpl - Enter getLogs method:page=1,linit=5
+2018-03-16 11:18:10.557 [http-nio-8081-exec-7] DEBUG LogServiceImpl - Exit getLogs method
+2018-03-16 11:18:10.557 [http-nio-8081-exec-7] INFO  IndexController - Exit admin index method
+2018-03-16 11:18:16.586 [http-nio-8081-exec-3] INFO  IndexController - Enter admin index method
+2018-03-16 11:18:16.586 [http-nio-8081-exec-3] DEBUG SiteServiceImpl - Enter recentComments method:limit=5
+2018-03-16 11:18:16.595 [http-nio-8081-exec-3] DEBUG SiteServiceImpl - Exit recentComments method
+2018-03-16 11:18:16.595 [http-nio-8081-exec-3] DEBUG SiteServiceImpl - Enter recentContents method
+2018-03-16 11:18:16.599 [http-nio-8081-exec-3] DEBUG SiteServiceImpl - Exit recentContents method
+2018-03-16 11:18:16.599 [http-nio-8081-exec-3] DEBUG SiteServiceImpl - Enter getStatistics method
+2018-03-16 11:18:16.617 [http-nio-8081-exec-3] DEBUG SiteServiceImpl - Exit getStatistics method
+2018-03-16 11:18:16.618 [http-nio-8081-exec-3] DEBUG LogServiceImpl - Enter getLogs method:page=1,linit=5
+2018-03-16 11:18:16.622 [http-nio-8081-exec-3] DEBUG LogServiceImpl - Exit getLogs method
+2018-03-16 11:18:16.622 [http-nio-8081-exec-3] INFO  IndexController - Exit admin index method
+2018-03-16 11:18:59.448 [http-nio-8081-exec-4] INFO  IndexController - Enter admin index method
+2018-03-16 11:18:59.448 [http-nio-8081-exec-4] DEBUG SiteServiceImpl - Enter recentComments method:limit=5
+2018-03-16 11:18:59.451 [http-nio-8081-exec-4] DEBUG SiteServiceImpl - Exit recentComments method
+2018-03-16 11:18:59.451 [http-nio-8081-exec-4] DEBUG SiteServiceImpl - Enter recentContents method
+2018-03-16 11:18:59.455 [http-nio-8081-exec-4] DEBUG SiteServiceImpl - Exit recentContents method
+2018-03-16 11:18:59.455 [http-nio-8081-exec-4] DEBUG SiteServiceImpl - Enter getStatistics method
+2018-03-16 11:18:59.462 [http-nio-8081-exec-4] DEBUG SiteServiceImpl - Exit getStatistics method
+2018-03-16 11:18:59.462 [http-nio-8081-exec-4] DEBUG LogServiceImpl - Enter getLogs method:page=1,linit=5
+2018-03-16 11:18:59.468 [http-nio-8081-exec-4] DEBUG LogServiceImpl - Exit getLogs method
+2018-03-16 11:18:59.468 [http-nio-8081-exec-4] INFO  IndexController - Exit admin index method
+2018-03-16 11:31:14.995 [http-nio-8081-exec-3] DEBUG ContentServiceImpl - Enter getContents method
+2018-03-16 11:31:15.011 [http-nio-8081-exec-3] DEBUG ContentServiceImpl - Exit getContents method
+2018-03-16 11:31:23.502 [http-nio-8081-exec-2] ERROR GlobalExceptionHandler - find exception:e=query content by id and return is not one
+2018-03-16 11:31:29.800 [http-nio-8081-exec-3] ERROR GlobalExceptionHandler - find exception:e=query content by id and return is not one
+2018-03-16 11:31:44.383 [http-nio-8081-exec-8] INFO  IndexController - Enter admin index method
+2018-03-16 11:31:44.383 [http-nio-8081-exec-8] DEBUG SiteServiceImpl - Enter recentComments method:limit=5
+2018-03-16 11:31:44.387 [http-nio-8081-exec-8] DEBUG SiteServiceImpl - Exit recentComments method
+2018-03-16 11:31:44.387 [http-nio-8081-exec-8] DEBUG SiteServiceImpl - Enter recentContents method
+2018-03-16 11:31:44.395 [http-nio-8081-exec-8] DEBUG SiteServiceImpl - Exit recentContents method
+2018-03-16 11:31:44.395 [http-nio-8081-exec-8] DEBUG SiteServiceImpl - Enter getStatistics method
+2018-03-16 11:31:44.409 [http-nio-8081-exec-8] DEBUG SiteServiceImpl - Exit getStatistics method
+2018-03-16 11:31:44.409 [http-nio-8081-exec-8] DEBUG LogServiceImpl - Enter getLogs method:page=1,linit=5
+2018-03-16 11:31:44.417 [http-nio-8081-exec-8] DEBUG LogServiceImpl - Exit getLogs method
+2018-03-16 11:31:44.417 [http-nio-8081-exec-8] INFO  IndexController - Exit admin index method
+2018-03-16 11:32:00.193 [http-nio-8081-exec-5] DEBUG ContentServiceImpl - Enter getContents method
+2018-03-16 11:32:00.209 [http-nio-8081-exec-5] DEBUG ContentServiceImpl - Exit getContents method
+2018-03-16 11:32:02.308 [http-nio-8081-exec-2] DEBUG SiteServiceImpl - Enter getArchives method
+2018-03-16 11:32:02.316 [http-nio-8081-exec-2] DEBUG SiteServiceImpl - Exit getArchives method
+2018-03-16 11:32:05.563 [http-nio-8081-exec-7] DEBUG SiteServiceImpl - Enter getArchives method
+2018-03-16 11:32:05.568 [http-nio-8081-exec-7] DEBUG SiteServiceImpl - Exit getArchives method
+2018-09-19 14:32:15.075 [http-nio-8081-exec-1] DEBUG ContentServiceImpl - Enter getContents method
+2018-09-19 14:32:16.202 [http-nio-8081-exec-1] DEBUG ContentServiceImpl - Exit getContents method
+2018-09-19 14:32:47.035 [http-nio-8081-exec-9] INFO  IndexController - Enter admin index method
+2018-09-19 14:32:47.035 [http-nio-8081-exec-9] DEBUG SiteServiceImpl - Enter recentComments method:limit=5
+2018-09-19 14:32:47.094 [http-nio-8081-exec-9] DEBUG SiteServiceImpl - Exit recentComments method
+2018-09-19 14:32:47.094 [http-nio-8081-exec-9] DEBUG SiteServiceImpl - Enter recentContents method
+2018-09-19 14:32:47.103 [http-nio-8081-exec-9] DEBUG SiteServiceImpl - Exit recentContents method
+2018-09-19 14:32:47.103 [http-nio-8081-exec-9] DEBUG SiteServiceImpl - Enter getStatistics method
+2018-09-19 14:32:47.124 [http-nio-8081-exec-9] DEBUG SiteServiceImpl - Exit getStatistics method
+2018-09-19 14:32:47.124 [http-nio-8081-exec-9] DEBUG LogServiceImpl - Enter getLogs method:page=1,linit=5
+2018-09-19 14:32:47.137 [http-nio-8081-exec-9] DEBUG LogServiceImpl - Exit getLogs method
+2018-09-19 14:32:47.137 [http-nio-8081-exec-9] INFO  IndexController - Exit admin index method
+2018-09-19 14:33:35.462 [http-nio-8081-exec-2] INFO  IndexController - Enter admin index method
+2018-09-19 14:33:35.463 [http-nio-8081-exec-2] DEBUG SiteServiceImpl - Enter recentComments method:limit=5
+2018-09-19 14:33:35.472 [http-nio-8081-exec-2] DEBUG SiteServiceImpl - Exit recentComments method
+2018-09-19 14:33:35.472 [http-nio-8081-exec-2] DEBUG SiteServiceImpl - Enter recentContents method
+2018-09-19 14:33:35.486 [http-nio-8081-exec-2] DEBUG SiteServiceImpl - Exit recentContents method
+2018-09-19 14:33:35.486 [http-nio-8081-exec-2] DEBUG SiteServiceImpl - Enter getStatistics method
+2018-09-19 14:33:35.517 [http-nio-8081-exec-2] DEBUG SiteServiceImpl - Exit getStatistics method
+2018-09-19 14:33:35.517 [http-nio-8081-exec-2] DEBUG LogServiceImpl - Enter getLogs method:page=1,linit=5
+2018-09-19 14:33:35.525 [http-nio-8081-exec-2] DEBUG LogServiceImpl - Exit getLogs method
+2018-09-19 14:33:35.525 [http-nio-8081-exec-2] INFO  IndexController - Exit admin index method
+2018-09-19 14:33:42.143 [http-nio-8081-exec-5] DEBUG ContentServiceImpl - Enter getContents method
+2018-09-19 14:33:42.154 [http-nio-8081-exec-5] DEBUG ContentServiceImpl - Exit getContents method
+2018-09-19 14:34:11.176 [http-nio-8081-exec-6] DEBUG SiteServiceImpl - Enter getArchives method
+2018-09-19 14:34:11.261 [http-nio-8081-exec-6] DEBUG SiteServiceImpl - Exit getArchives method
